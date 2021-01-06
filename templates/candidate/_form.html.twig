@@ -1,0 +1,104 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    <div class="danger">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Skill) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Skill) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Date_of_entry) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Date_of_entry) }}
+        </div>
+    </div> 
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Candidate_Name) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Candidate_Name) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Mobile) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Mobile) }}
+        </div>
+    </div>   
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Email) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Email) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Total_Exp) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Total_Exp) }}
+        </div>
+    </div> 
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Calculate_Total_Exp) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Calculate_Total_Exp) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Relevant_Exp) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Relevant_Exp) }}
+        </div>
+    </div>  
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Current_Company) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Current_Company) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Current_CTC) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Current_CTC) }}
+        </div>
+    </div> 
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Current_Location) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Current_Location) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Expected_Location) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Expected_Location) }}
+        </div>
+    </div>   
+      <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Expected_CTC) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Expected_CTC) }}
+        </div>
+    </div>
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Notice_Period) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Notice_Period) }}
+        </div>
+    </div>
+     <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Career_Join_Date) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Career_Join_Date) }}
+        </div>
+    </div> 
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.reminder) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.reminder) }}
+        </div>
+    </div>
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

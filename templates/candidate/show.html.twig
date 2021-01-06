@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidate{% endblock %}
+
+{% block body %}
+    <h1>Candidate</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ candidate.id }}</td>
+            </tr>
+            <tr>
+                <th>Skill</th>
+                <td>{{ candidate.Skill }}</td>
+            </tr>
+            <tr>
+                <th>Date_of_entry</th>
+                <td>{{ candidate.DateOfEntry ? candidate.DateOfEntry|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Candidate_Name</th>
+                <td>{{ candidate.CandidateName }}</td>
+            </tr>
+            <tr>
+                <th>Mobile</th>
+                <td>{{ candidate.Mobile }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ candidate.Email }}</td>
+            </tr>
+            <tr>
+                <th>Total_Exp</th>
+                <td>{{ candidate.TotalExp }}</td>
+            </tr>
+            <tr>
+                <th>Calculate_Total_Exp</th>
+                <td>{{ candidate.CalculateTotalExp }}</td>
+            </tr>
+            <tr>
+                <th>Relevant_Exp</th>
+                <td>{{ candidate.RelevantExp }}</td>
+            </tr>
+            <tr>
+                <th>Current_Company</th>
+                <td>{{ candidate.CurrentCompany }}</td>
+            </tr>
+            <tr>
+                <th>Current_CTC</th>
+                <td>{{ candidate.CurrentCTC }}</td>
+            </tr>
+            <tr>
+                <th>Expected_CTC</th>
+                <td>{{ candidate.ExpectedCTC }}</td>
+            </tr>
+            <tr>
+                <th>Current_Location</th>
+                <td>{{ candidate.CurrentLocation }}</td>
+            </tr>
+            <tr>
+                <th>Expected_Location</th>
+                <td>{{ candidate.ExpectedLocation }}</td>
+            </tr>
+            <tr>
+                <th>Notice_Period</th>
+                <td>{{ candidate.NoticePeriod }}</td>
+            </tr>
+            <tr>
+                <th>Career_Join_Date</th>
+                <td>{{ candidate.CareerJoinDate ? candidate.CareerJoinDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Reminder</th>
+                <td>{{ candidate.reminder }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('candidate_index') }}">back to list</a>
+
+    <a href="{{ path('candidate_edit', {'id': candidate.id}) }}">edit</a>
+
+    {{ include('candidate/_delete_form.html.twig') }}
+{% endblock %}

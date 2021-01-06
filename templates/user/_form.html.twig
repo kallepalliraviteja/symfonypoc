@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.username) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.username) }}
+        </div>
+    </div> 
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.Roles) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.Roles) }}
+        </div>
+    </div>  
+    <div class="formgroup row">
+        <label for="staticEmail" class="col-md-3 col-form-label">{{ form_label(form.password) }}</label>
+        <div class="col col-md-9">
+            {{ form_widget(form.password) }}
+        </div>
+    </div>         
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

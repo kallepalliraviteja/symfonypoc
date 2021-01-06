@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidate index{% endblock %}
+
+{% block body %}
+<div class="row">
+<div class="col-md-11">
+    <h1>Candidate Database</h1>
+    </div>
+    <div class="col-md-1">
+    <h4 class="pull-left"><a href="{{ path('app_logout') }}" >Logout</a></h4>
+    </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="display:none">Id</th>
+                <th>Skill</th>
+                <th style="display:none">Date_of_entry</th>
+                <th>Candidate_Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Total_Exp</th>
+                <th style="display:none">Calculate_Total_Exp</th>
+                <th style="display:none">Relevant_Exp</th>
+                <th>Current_Company</th>
+                <th>Current_CTC</th>
+                <th>Expected_CTC</th>
+                <th style="display:none">Current_Location</th>
+                <th style="display:none">Expected_Location</th>
+                <th style="display:none">Notice_Period</th>
+                <th style="display:none">Career_Join_Date</th>
+                <th style="display:none">Reminder</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for candidate in candidates %}
+            <tr>
+                <td style="display:none">{{ candidate.id }}</td>
+                <td>{{ candidate.Skill }}</td>
+                <td style="display:none">{{ candidate.DateOfEntry ? candidate.DateOfEntry|date('Y-m-d') : '' }}</td>
+                <td>{{ candidate.CandidateName }}</td>
+                <td>{{ candidate.Mobile }}</td>
+                <td>{{ candidate.Email }}</td>
+                <td>{{ candidate.TotalExp }}</td>
+                <td style="display:none">{{ candidate.CalculateTotalExp }}</td>
+                <td style="display:none">{{ candidate.RelevantExp }}</td>
+                <td>{{ candidate.CurrentCompany }}</td>
+                <td>{{ candidate.CurrentCTC }}</td>
+                <td>{{ candidate.ExpectedCTC }}</td>
+                <td style="display:none">{{ candidate.CurrentLocation }}</td>
+                <td style="display:none">{{ candidate.ExpectedLocation }}</td>
+                <td style="display:none">{{ candidate.NoticePeriod }}</td>
+                <td style="display:none">{{ candidate.CareerJoinDate ? candidate.CareerJoinDate|date('Y-m-d') : '' }}</td>
+                <td style="display:none">{{ candidate.reminder }}</td>
+                <td>
+                    <a href="{{ path('candidate_show', {'id': candidate.id}) }}">show</a>
+                    <a href="{{ path('candidate_edit', {'id': candidate.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="18">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('candidate_new') }}">Create new</a>
+{% endblock %}
